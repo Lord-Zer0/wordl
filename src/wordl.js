@@ -8,7 +8,8 @@ let currentGuess = [];
 
 function init() {
     dictionary.loadWordData('words-La');
-    secret = dictionary.db[Math.floor(Math.random() * dictionary.db.length)];
+    var words = dictionary.printWords();
+    var secret = words[Math.floor(Math.random() * words.length)];
     console.log(secret);
 }
 
