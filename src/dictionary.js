@@ -5,7 +5,10 @@ class Dictionary {
 
     loadWordsIntoDictionary(wordlist) {
         for (let index = 0; index < wordlist.length; index++) {
+            console.log(this.db[index]);
+            console.log(wordlist[index]);
             this.db[index] = wordlist[index];
+            
         }
     }
 
@@ -16,7 +19,7 @@ class Dictionary {
         // Handles the response recieved from sending the request
         request.onload = function() {
             if (request.response) {
-                this.db = self.CSVToArray(request.response);
+                this.db = self.loadWordsIntoDictionary(self.CSVToArray(request.response));
                 console.log(this.db);
             }
         }
@@ -46,8 +49,7 @@ class Dictionary {
     }
 
     printWords() {
-        let dict = this.db;
-        return dict;
+        return this.db;
     }
    
 }

@@ -36,6 +36,23 @@
     text-transform: uppercase;
 }
 
+.keyboard-container {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.letter-box {
+    width: 100%;
+    line-height: 1;
+    box-sizing: border-box;
+    align-items: center;
+    vertical-align: middle;
+    border: 2px solid var(--bs-dark-bg-subtle);
+    text-transform: uppercase;
+}
+
 .tile-module_tile::before {
     content: "";
     display: inline-block;
